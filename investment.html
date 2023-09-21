@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- css file -->
+    <link rel="stylesheet" href="./investment.css" />
+    <title>Investment Plan Calculator</title>
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <div class="blue-bg"></div>
+      <div class="white-bg"></div>
+      <!-- Header -->
+      <div class="calculator">
+        <h1>Investment Plan Calculator</h1>
+        <!-- Amount Input -->
+        <div class="input">
+          <label for="initialAmount">Initial Investment Amount:</label>
+          <input
+            type="number"
+            id="initialAmount"
+            placeholder="Enter initial amount"
+          />
+        </div>
+        <!-- Interest Rate -->
+        <div class="input">
+          <label for="annualInterestRate">Annual Interest Rate (%):</label>
+          <input
+            type="number"
+            id="annualInterestRate"
+            placeholder="Enter annual interest rate"
+          />
+        </div>
+        <div class="input">
+          <!-- Time Period -->
+          <label for="years">Number of Years:</label>
+          <input type="number" id="years" placeholder="Enter number of years" />
+        </div>
+        <button onclick="calculate()">Calculate</button>
+        <div class="output">
+          <p>Future Value:</p>
+          <!-- Initial value{updates when all the input are given and calculated} -->
+          <span id="futureValue">$0.00</span>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="./investment.js"></script>
+</html>
